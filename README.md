@@ -34,7 +34,7 @@ instead of writing reports by hand.
 
 ```bash
 
-git clone https://github.com/<your-username>/AlertSentry.git
+git clone https://github.com/Unoun-Gani/AlertSentry.git
 cd AlertSentry
 
 # 2. (Recommended) create a virtual environment
@@ -52,7 +52,7 @@ python3 soc_monitor.py --help
 
 ```powershell
 # 1. Clone the repo, then move into it
-git clone https://github.com/<your-username>/AlertSentry.git
+git clone https://github.com/Unoun-Gani/AlertSentry.git
 cd AlertSentry
 
 # 2. (Recommended) create a virtual environment
