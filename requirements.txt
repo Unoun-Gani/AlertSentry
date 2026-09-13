@@ -1,0 +1,8 @@
+# AlertSentry has no third-party runtime dependencies — it's built entirely
+# on the Python standard library (json, csv, re, email, argparse, os, time).
+# This file exists so `pip install -r requirements.txt` works out of the box
+# and so future dependencies (e.g. threat-intel API clients) have a home.
+
+# --- Optional, for future extensions (uncomment if you add these features) ---
+# requests>=2.31.0        # for VirusTotal / AbuseIPDB API enrichment
+# watchdog>=4.0.0         # for filesystem-event-based watching instead of polling

@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+env/
+
+# AlertSentry runtime artifacts (auto-generated, don't commit)
+reports/*.md
+!reports/.gitkeep
+.processed/
+
+# OS / editor junk
+.DS_Store
+.vscode/
+.idea/
