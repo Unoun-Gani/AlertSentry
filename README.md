@@ -30,13 +30,16 @@ instead of writing reports by hand.
 
 ## Installation
 
+### macOS / Linux
+
 ```bash
-git clone https://github.com/Unoun-Gani/AlertSentry.git
+# 1. Clone the repo, then move into it
+git clone https://github.com/<your-username>/AlertSentry.git
 cd AlertSentry
 
 # 2. (Recommended) create a virtual environment
 python3 -m venv venv
-source venv/bin/activate          # Windows: venv\Scripts\activate
+source venv/bin/activate
 
 # 3. Install dependencies (currently none — future-proofs the project)
 pip install -r requirements.txt
@@ -45,7 +48,31 @@ pip install -r requirements.txt
 python3 soc_monitor.py --help
 ```
 
+### Windows (PowerShell)
+
+```powershell
+# 1. Clone the repo, then move into it
+git clone https://github.com/<your-username>/AlertSentry.git
+cd AlertSentry
+
+# 2. (Recommended) create a virtual environment
+python -m venv venv
+venv\Scripts\Activate.ps1
+
+# 3. Install dependencies (currently none — future-proofs the project)
+pip install -r requirements.txt
+
+# 4. Verify it runs
+python soc_monitor.py --help
+```
+
+> **Note for Windows users:** use `python`, not `python3` — Windows installs
+> Python under the `python` command by default. If any command fails, see
+> [Troubleshooting (Windows)](#troubleshooting-windows) below.
+
 ## Quick start
+
+macOS/Linux: use `python3`. Windows: use `python`. Otherwise identical:
 
 ```bash
 # Process everything currently sitting in sample_logs/ and sample_emails/, once
@@ -99,6 +126,39 @@ soc_tool/
 ├── sample_emails/       # drop .eml files here
 └── reports/               # generated case reports + _index.md
 ```
+
+## Troubleshooting (Windows)
+
+**`Python was not found; run without arguments to install from the
+Microsoft Store...`**
+This means either Python isn't installed, or Windows' fake "Store alias" is
+intercepting the command.
+1. Run `python --version` in PowerShell. If it prints a version number,
+   Python is already installed — just use `python`, not `python3`, in every
+   command.
+2. If it still shows the Microsoft Store message, install Python properly
+   from [python.org/downloads](https://www.python.org/downloads/) — **not**
+   the Microsoft Store — and make sure you tick **"Add python.exe to PATH"**
+   during setup.
+3. If Python is installed but the Store message still appears, go to
+   **Settings → Apps → Advanced app settings → App execution aliases** and
+   turn **off** the toggles for `python.exe` and `python3.exe`.
+
+**`source : The term 'source' is not recognized...`**
+`source` is a Linux/Mac shell command and doesn't exist in PowerShell. To
+activate a virtual environment on Windows, use:
+```powershell
+venv\Scripts\Activate.ps1
+```
+
+**`... cannot be loaded because running scripts is disabled on this
+system`** (when activating the venv)
+PowerShell blocks script execution by default. Run this once per user (not
+as Administrator), then try activating again:
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+```
+Type `Y` to confirm when prompted.
 
 ## Roadmap / extension ideas
 
