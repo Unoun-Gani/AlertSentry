@@ -31,8 +31,8 @@ instead of writing reports by hand.
 ## Installation
 
 ```bash
-# 1. Clone or unzip the project, then move into it
-cd soc_tool
+git clone https://github.com/Unoun-Gani/AlertSentry.git
+cd AlertSentry
 
 # 2. (Recommended) create a virtual environment
 python3 -m venv venv
