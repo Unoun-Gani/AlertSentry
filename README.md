@@ -33,7 +33,7 @@ instead of writing reports by hand.
 ### macOS / Linux
 
 ```bash
-# 1. Clone the repo, then move into it
+
 git clone https://github.com/<your-username>/AlertSentry.git
 cd AlertSentry
 
