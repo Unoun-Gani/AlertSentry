@@ -1,0 +1,27 @@
+From: IT Support <support@mail.ru>
+Reply-To: attacker@evil-corp.biz
+To: employee@company.com
+Subject: Urgent Action Required: Verify your account
+Content-Type: multipart/mixed; boundary="BOUNDARY123"
+MIME-Version: 1.0
+
+--BOUNDARY123
+Content-Type: text/plain; charset="utf-8"
+
+Dear User,
+
+Your account will be closed unless you verify your identity immediately.
+Please click here immediately: http://secure-login-verify.example-phish.com/reset
+
+Attached is an invoice for your records.
+
+IT Support Team
+
+--BOUNDARY123
+Content-Type: application/octet-stream; name="invoice_details.exe"
+Content-Disposition: attachment; filename="invoice_details.exe"
+Content-Transfer-Encoding: base64
+
+VGhpcyBpcyBhIGZha2UgYXR0YWNobWVudCBmb3IgdGVzdGluZyBwdXJwb3Nlcy4=
+
+--BOUNDARY123--
